@@ -6,13 +6,22 @@
   "author": "Jeremy Odell <jeremy0dell@yahoo.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "nodemon src/server/index.js",
+    "start": "nodemon src/server --ignore src/client --ignore src/public",
     "dev": "webpack -d --watch",
     "build": "webpack -p"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "webpack": "^3.5.5"
   }
 }
