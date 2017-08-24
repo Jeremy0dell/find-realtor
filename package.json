@@ -1,0 +1,18 @@
+{
+  "name": "find-realtor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jeremy0dell/find-realtor.git",
+  "author": "Jeremy Odell <jeremy0dell@yahoo.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "nodemon src/server/index.js",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.5.5"
+  }
+}
