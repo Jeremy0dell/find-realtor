@@ -11,17 +11,20 @@
     "build": "webpack -p"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-places-autocomplete": "^5.4.2",
     "webpack": "^3.5.5"
   }
 }
