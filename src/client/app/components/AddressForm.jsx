@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import SimpleForm from './SimpleForm.jsx'
 
 class AddressForm extends Component {
   render() {
     return (
       <div>
-        <h1>Address form will be here.</h1>
+        <SimpleForm />
       </div>
     )
   }
