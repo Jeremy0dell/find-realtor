@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AddressForm from './AddressForm.jsx'
 import AgenciesList from './AgenciesList.jsx'
 import AgenciesSearch from './AgenciesSearch.jsx'
+import AgenciesContainer from './AgenciesContainer.jsx'
 
 let address = '3009 washington Square, Austin, TX'
 let searchTerm = 'real_estate_agency'
@@ -15,12 +16,10 @@ class App extends Component {
 
     this.onChange0 = (address) => {
       this.setState({ address0: address })
-      console.log(this.state)
     }
 
     this.onChange1 = (address) => {
       this.setState({ address1: address })
-      console.log(this.state)
     }
   }
 
@@ -44,8 +43,8 @@ class App extends Component {
       <div>
         <AddressForm address={this.state.address0} onChange={this.onChange0} />
         <AddressForm address={this.state.address1} onChange={this.onChange1} />
-        <AgenciesSearch addresses={this.state} />
-        <AgenciesList address={address} searchTerm={searchTerm} />
+        <AgenciesContainer addresses={this.state} />
+        {/* <AgenciesList address={address} searchTerm={searchTerm} /> */}
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AgenciesList from './AgenciesList.jsx'
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 class AgenciesSearch extends Component {
@@ -7,25 +8,13 @@ class AgenciesSearch extends Component {
     super(props)
   }
 
-  handleFormSubmit = (event) => {
-    event.preventDefault()
-
-    geocodeByAddress(this.props.addresses.address0)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error))
-
-    geocodeByAddress(this.props.addresses.address1)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error))
-  }
-
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <div>
+      <form onSubmit={this.props.handleFormSubmit}>
         <button type="submit">Submit It</button>
       </form>
+    </div>
     )
   }
 }
