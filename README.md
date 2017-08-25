@@ -1,3 +1,3 @@
 # find-realtor
 
-Simply yarn build and yarn start
+## Simply yarn install, yarn build, and yarn start.
