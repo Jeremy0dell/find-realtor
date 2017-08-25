@@ -23,7 +23,7 @@ class AgenciesList extends Component {
             <tr key={agency.id}>
               <td>{agency.name}</td>
               <td>{agency.vicinity}</td>
-              <td>{agency.distance}</td>
+              <td>{agency.distance.slice(0,4)km}</td>
             </tr>
           )}
         </tbody>
