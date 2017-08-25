@@ -23,6 +23,17 @@ class SimpleForm extends React.Component {
       onChange: this.props.onChange,
     }
 
+    const cssClasses = {
+      // root: 'form-group',
+      input: 'Demo__search-input',
+      autocompleteContainer: 'Demo__autocomplete-container',
+    }
+
+    const myStyles = {
+      autocompleteItem: { color: 'black' },
+      autocompleteItemActive: { color: 'blue' }
+    }
+
     // return (
     //   <form onSubmit={this.props.handleFormSubmit}>
     //     <PlacesAutocomplete inputProps={inputProps} />
@@ -30,7 +41,11 @@ class SimpleForm extends React.Component {
     //   </form>
     // )
     return (
-      <PlacesAutocomplete inputProps={inputProps} />
+        <PlacesAutocomplete
+          inputProps={inputProps}
+          classNames={cssClasses}
+          styles={myStyles}
+        />
     )
   }
 }

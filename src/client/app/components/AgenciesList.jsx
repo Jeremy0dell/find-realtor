@@ -11,11 +11,18 @@ class AgenciesList extends Component {
     const { nearbyAgencies } = this.props
 
     return (
-      <ul>
-      {nearbyAgencies.map((agency) =>
-        <li key={agency.distance}>{agency.name}</li>
-      )}
-    </ul>
+      <table className="table">
+        <tbody>
+          <tr>
+            <th>Company</th>
+          </tr>
+        {nearbyAgencies.map((agency) =>
+          <tr key={agency.id}>
+            <td>{agency.name}</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
     )
   }
 }

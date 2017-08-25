@@ -40,11 +40,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <AddressForm address={this.state.address0} onChange={this.onChange0} />
-        <AddressForm address={this.state.address1} onChange={this.onChange1} />
+      <div className="container app-container">
+        <div className="form-container">
+          <AddressForm address={this.state.address0} onChange={this.onChange0} />
+          <AddressForm address={this.state.address1} onChange={this.onChange1} />
+        </div>
         <AgenciesContainer addresses={this.state} />
-        {/* <AgenciesList address={address} searchTerm={searchTerm} /> */}
+      {/* <AgenciesList address={address} searchTerm={searchTerm} /> */}
       </div>
     )
   }

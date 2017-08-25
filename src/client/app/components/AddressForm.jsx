@@ -9,9 +9,7 @@ class AddressForm extends Component {
 
   render() {
     return (
-      <div>
-        <SimpleForm address={this.props.address} onChange={this.props.onChange} />
-      </div>
+      <SimpleForm address={this.props.address} onChange={this.props.onChange} />
     )
   }
 }
