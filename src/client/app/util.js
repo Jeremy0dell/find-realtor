@@ -1,10 +1,17 @@
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import axios from 'axios'
 
-const SERVER_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyAsc823zMjgiOy9b1beWBvKUmysOVYRqu4&type=real_estate_agency&radius=500&location='
+const SERVER_URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyAsc823zMjgiOy9b1beWBvKUmysOVYRqu4&type=real_estate_agency&radius=5000&location='
 
 const fetchAgencies = function(lat, lng) {
-  return axios(`${SERVER_URL}${lat},${lng}`).then(res => res.data)
+  // return axios(`${SERVER_URL}${lat},${lng}`).then(res => res.data)
+  return axios.get('/places', {
+    params: {
+      lat: lat,
+      lng: lng
+    }
+  })
+  .then(res => res.data)
 }
 
 const fetchWrappedAgencies = function(coords) {
@@ -38,19 +45,6 @@ function getMapInfo(adr0, adr1) {
     return data
   })
   .catch((err) => { console.log('There was an error gathering user information:', err) })
-}
-
-
-
-
-
-function getUserData (id) {
-  return Promise.all(fetchWrappedUrls(id))
-  .then((data) => {
-    console.log(`${data[0].username} has ${data[1].length} posts, ${data[2].length} todos, and ${data[3].length} albums.`);
-    return data;
-  })
-  .catch((err) => { console.log('There was an error gathering user information:', err) });
 }
 
 export { getMapInfo, getAgencyInfo }

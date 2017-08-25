@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 
+
 var BUILD_DIR = path.resolve(__dirname, 'src/public')
 var APP_DIR = path.resolve(__dirname, 'src/client')
 
@@ -12,12 +13,16 @@ var config = {
   },
   devtool: 'eval',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
+        use: 'babel-loader',
         include: APP_DIR,
-        loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.png?/,
+        use: 'file-loader'
       }
     ]
   }
