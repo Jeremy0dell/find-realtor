@@ -12,6 +12,10 @@ app.use('/public', express.static(path.join(__dirname, '../public/')))
 
 app.use(bodyParser.json())
 
+
+/**
+  Google Places API must be ran in the server
+*/
 app.get('/places', (req, res, next) => {
   axios(`${SERVER_URL}${req.query.lat},${req.query.lng}`)
   .then(result => {

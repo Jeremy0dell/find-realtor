@@ -17,7 +17,7 @@ class AgenciesList extends Component {
             {nearbyAgencies.length ? <tr>
               <th>Company</th>
               <th>Address</th>
-            </tr> : ""}
+            </tr> : <tr></tr>}
           {nearbyAgencies.map((agency) =>
             <tr key={agency.id}>
               <td>{agency.name}</td>
