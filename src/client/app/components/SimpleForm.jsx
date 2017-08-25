@@ -41,11 +41,13 @@ class SimpleForm extends React.Component {
     //   </form>
     // )
     return (
+      <div className="col">
         <PlacesAutocomplete
           inputProps={inputProps}
           classNames={cssClasses}
           styles={myStyles}
         />
+      </div>
     )
   }
 }

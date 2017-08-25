@@ -11,8 +11,8 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { address0: 'San Francisco, CA',
-                   address1: 'San Francisco, CA' }
+    this.state = { address0: 'Austin, TX',
+                   address1: 'Austin, TX' }
 
     this.onChange0 = (address) => {
       this.setState({ address0: address })
@@ -41,8 +41,11 @@ class App extends Component {
   render() {
     return (
       <div className="container app-container">
-        <div className="form-container">
+        <h1>This is the title</h1>
+        <div className="row form-container">
+          <h3>Input Address #1</h3>
           <AddressForm address={this.state.address0} onChange={this.onChange0} />
+          <h3>Input Address #2</h3>
           <AddressForm address={this.state.address1} onChange={this.onChange1} />
         </div>
         <AgenciesContainer addresses={this.state} />

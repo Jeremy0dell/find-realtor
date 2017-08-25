@@ -12,7 +12,7 @@ class AgenciesSearch extends Component {
     return (
       <div>
       <form onSubmit={this.props.handleFormSubmit}>
-        <button type="submit">Submit It</button>
+        <button className="btn" type="submit">Find Nearby Agencies</button>
       </form>
     </div>
     )
