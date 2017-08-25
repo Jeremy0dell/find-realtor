@@ -66,7 +66,6 @@ function getMapInfo(adr0, adr1) {
 */
 function arrayUnique(arr) {
   let a = arr[0].results.concat(arr[1].results)
-  console.log(a)
   for(let i=0; i<a.length; ++i) {
     for(let j=i+1; j<a.length; ++j) {
       if(a[i].id === a[j].id) {
@@ -125,7 +124,6 @@ function sortByDistance(arr, coord0, coord1) {
   arr.sort(function(a, b) {
     return a.distance - b.distance
   });
-  console.log(arr.map(x => x.distance),'now?', arr)
 
   return arr
 }

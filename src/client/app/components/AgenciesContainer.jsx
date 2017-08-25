@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import AgenciesList from './AgenciesList.jsx'
 import AgenciesSearch from './AgenciesSearch.jsx'
-import { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 import { getMapInfo, getAgencyInfo, arrayUnique, sortByDistance } from '../util.js'
 
