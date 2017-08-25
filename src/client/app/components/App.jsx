@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="container app-container">
-        <h1>This is the title</h1>
+        <h1>Find Real Estate Agencies near you!</h1>
         <div className="row form-container">
           <h3>Input Address #1</h3>
           <AddressForm address={this.state.address0} onChange={this.onChange0} />
