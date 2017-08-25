@@ -17,13 +17,8 @@ class AgenciesContainer extends Component {
       nearbyAgencies: []
     }
 
-    // this.onSubmit = (agencies) => {
-    //   this.setState({ nearbyAgencies: agencies })
-    // }
-
     this.handleFormSubmit = (event) => {
       event.preventDefault()
-      console.log(this.props)
 
       getMapInfo(this.props.addresses.address0, this.props.addresses.address1)
       .then((data) => {
